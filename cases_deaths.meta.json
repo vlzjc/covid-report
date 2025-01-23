@@ -1,0 +1,2441 @@
+{
+  "short_name": "cases_deaths",
+  "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+  "dataset": {
+    "channel": "garden",
+    "namespace": "covid",
+    "short_name": "cases_deaths",
+    "title": "COVID-19, confirmed cases and deaths",
+    "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+    "is_public": true,
+    "version": "latest",
+    "update_period_days": 31,
+    "non_redistributable": false,
+    "source_checksum": "8214ab8af12e0718226b8c2df1c06658"
+  },
+  "primary_key": [],
+  "fields": {
+    "country": {
+      "title": "Country",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ]
+    },
+    "date": {},
+    "new_cases": {
+      "title": "Daily new confirmed cases of COVID-19",
+      "description_short": "New confirmed cases of COVID-19. Counts can include probable cases, where reported. In rare cases where our source reports a negative daily change due to a data correction, we set this metric to NA.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "cases",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0,
+        "tolerance": 14
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Daily new confirmed COVID-19 cases",
+          "subtitle": "Due to limited testing, the number of confirmed cases is lower than the true number of infections.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                100,
+                300,
+                1000,
+                3000,
+                10000,
+                30000,
+                100000,
+                300000,
+                1000000
+              ],
+              "baseColorScheme": "RdPu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "total_cases": {
+      "title": "Total confirmed cases of COVID-19",
+      "description_short": "Total confirmed cases of COVID-19. Counts can include probable cases, where reported.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "cases",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0,
+        "tolerance": 9999
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Cumulative confirmed COVID-19 cases",
+          "subtitle": "Due to limited testing, the number of confirmed cases is lower than the true number of infections.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                100000,
+                300000,
+                1000000,
+                3000000,
+                10000000,
+                30000000,
+                100000000,
+                300000000
+              ],
+              "baseColorScheme": "RdPu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "new_deaths": {
+      "title": "Daily new confirmed deaths due to COVID-19",
+      "description_short": "New deaths attributed to COVID-19. Counts can include probable deaths, where reported. In rare cases where our source reports a negative daily change due to a data correction, we set this metric to NA.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "deaths",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0,
+        "tolerance": 14
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Daily new confirmed COVID-19 deaths",
+          "subtitle": "Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                1,
+                3,
+                10,
+                30,
+                100,
+                300,
+                1000,
+                3000,
+                -1
+              ],
+              "baseColorScheme": "RdPu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "total_deaths": {
+      "title": "Total confirmed deaths due to COVID-19",
+      "description_short": "Total deaths attributed to COVID-19. Counts can include probable deaths, where reported.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "deaths",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0,
+        "tolerance": 9999,
+        "color": "#565656"
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Cumulative confirmed COVID-19 deaths",
+          "subtitle": "Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                1000,
+                3000,
+                10000,
+                30000,
+                100000,
+                300000,
+                1000000,
+                3000000
+              ],
+              "baseColorScheme": "RdPu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "weekly_cases": {
+      "title": "Weekly cases",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "cases",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0,
+        "tolerance": 30
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Weekly confirmed COVID-19 cases",
+          "subtitle": "Weekly confirmed cases refer to the cumulative number of confirmed cases over the previous week.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                1000,
+                5000,
+                10000,
+                50000,
+                100000,
+                500000,
+                1000000,
+                5000000
+              ],
+              "baseColorScheme": "RdPu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "weekly_deaths": {
+      "title": "Weekly deaths",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "deaths",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0,
+        "tolerance": 30
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Weekly confirmed COVID-19 deaths",
+          "subtitle": "Weekly confirmed deaths refer to the cumulative number of confirmed deaths over the previous week. Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "tab": "map",
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                50,
+                100,
+                500,
+                1000,
+                5000,
+                10000,
+                50000
+              ],
+              "baseColorScheme": "RdPu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "weekly_pct_growth_cases": {
+      "title": "Weekly case growth (%)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "%",
+      "short_unit": "%",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 30
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Week by week change of confirmed COVID-19 cases",
+          "subtitle": "The weekly growth rate on any given date measures the percentage change in number of confirmed cases over the last seven days relative to the number in the previous seven days.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "customNumericColorsActive": true,
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                -200,
+                -100,
+                -50,
+                -20,
+                0,
+                20,
+                50,
+                100,
+                200,
+                500
+              ],
+              "colorSchemeInvert": true,
+              "baseColorScheme": "RdBu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "weekly_pct_growth_deaths": {
+      "title": "Weekly death growth (%)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "%",
+      "short_unit": "%",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 30
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Week by week change of confirmed COVID-19 deaths",
+          "subtitle": "The weekly growth rate on any given date measures the percentage change in number of confirmed deaths over the last seven days relative to the number in the previous seven days. Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "tab": "map",
+          "map": {
+            "colorScale": {
+              "customNumericColorsActive": true,
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                -50,
+                -25,
+                -10,
+                0,
+                10,
+                25,
+                50,
+                100,
+                300
+              ],
+              "colorSchemeInvert": true,
+              "baseColorScheme": "RdBu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "biweekly_cases": {
+      "title": "Biweekly cases",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "cases",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0,
+        "tolerance": 30
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Biweekly confirmed COVID-19 cases",
+          "subtitle": "Biweekly confirmed cases refer to the cumulative number of confirmed cases over the previous two weeks.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                5000,
+                10000,
+                50000,
+                100000,
+                500000,
+                1000000,
+                5000000,
+                10000000
+              ],
+              "baseColorScheme": "RdPu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "biweekly_deaths": {
+      "title": "Biweekly deaths",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "deaths",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0,
+        "tolerance": 30
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Biweekly confirmed COVID-19 deaths",
+          "subtitle": "Biweekly confirmed deaths refer to the cumulative number of confirmed deaths over the previous two weeks. Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "customNumericColorsActive": true,
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                50,
+                100,
+                500,
+                1000,
+                5000,
+                10000,
+                50000
+              ],
+              "baseColorScheme": "RdPu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "biweekly_pct_growth_cases": {
+      "title": "Biweekly case growth (%)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "%",
+      "short_unit": "%",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 1,
+        "tolerance": 30
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Biweekly change of confirmed COVID-19 cases",
+          "subtitle": "The biweekly growth rate on any given date measures the percentage change in the number of new confirmed cases over the last 14 days relative to the number in the previous 14 days.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "customNumericColorsActive": true,
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                -200,
+                -100,
+                -40,
+                0,
+                40,
+                100,
+                200,
+                400,
+                1000
+              ],
+              "colorSchemeInvert": true,
+              "baseColorScheme": "RdBu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "biweekly_pct_growth_deaths": {
+      "title": "Biweekly death growth (%)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "%",
+      "short_unit": "%",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 1,
+        "tolerance": 30
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Biweekly change of confirmed COVID-19 deaths",
+          "subtitle": "The biweekly growth rate on any given date measures the percentage change in the number of new confirmed deaths over the last 14 days relative to the number in the previous 14 days. Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "customNumericColorsActive": true,
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                -50,
+                -25,
+                -10,
+                0,
+                10,
+                25,
+                50,
+                100,
+                300
+              ],
+              "colorSchemeInvert": true,
+              "baseColorScheme": "RdBu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "new_cases_per_million": {
+      "title": "Daily new confirmed cases of COVID-19 per million people",
+      "description_short": "New confirmed cases of COVID-19 per 1,000,000 people. Counts can include probable cases, where reported.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "cases per million people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 14
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Daily new confirmed COVID-19 cases per million people",
+          "subtitle": "Due to limited testing, the number of confirmed cases is lower than the true number of infections.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                10,
+                20,
+                50,
+                100,
+                200,
+                500,
+                1000,
+                2000,
+                5000,
+                10000
+              ],
+              "baseColorScheme": "OrRd"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "new_deaths_per_million": {
+      "title": "Daily new confirmed deaths due to COVID-19 per million people",
+      "description_short": "New deaths attributed to COVID-19 per 1,000,000 people. Counts can include probable deaths, where reported.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "deaths per million people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 14
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Daily new confirmed COVID-19 deaths per million people",
+          "subtitle": "Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                0.1,
+                0.2,
+                0.5,
+                1,
+                2,
+                5,
+                10,
+                20,
+                50,
+                100
+              ],
+              "baseColorScheme": "OrRd"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "total_cases_per_million": {
+      "title": "Total confirmed cases of COVID-19 per million people",
+      "description_short": "Total confirmed cases of COVID-19 per 1,000,000 people. Counts can include probable cases, where reported.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "cases per million people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 3,
+        "tolerance": 9999
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Cumulative confirmed COVID-19 cases per million people",
+          "subtitle": "Due to limited testing, the number of confirmed cases is lower than the true number of infections.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                100,
+                300,
+                1000,
+                3000,
+                10000,
+                30000,
+                100000,
+                300000,
+                1000000
+              ],
+              "baseColorScheme": "OrRd"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "total_deaths_per_million": {
+      "title": "Total confirmed deaths due to COVID-19 per million people",
+      "description_short": "Total deaths attributed to COVID-19 per 1,000,000 people. Counts can include probable deaths, where reported.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "deaths per million people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 3,
+        "tolerance": 9999,
+        "color": "#565656"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Cumulative confirmed COVID-19 deaths per million people",
+          "subtitle": "Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                1000,
+                2000,
+                3000,
+                4000,
+                5000,
+                6000
+              ],
+              "baseColorScheme": "OrRd"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "weekly_cases_per_million": {
+      "title": "Weekly cases per million people",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "cases per million people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 3,
+        "tolerance": 30
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Weekly confirmed COVID-19 cases per million people",
+          "subtitle": "Weekly confirmed cases refer to the cumulative number of confirmed cases over the previous week.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                10,
+                50,
+                100,
+                500,
+                1000,
+                5000,
+                10000,
+                50000
+              ],
+              "baseColorScheme": "OrRd"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "weekly_deaths_per_million": {
+      "title": "Weekly deaths per million people",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "deaths per million people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 30
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Weekly confirmed COVID-19 deaths per million people",
+          "subtitle": "Weekly confirmed deaths refer to the cumulative number of confirmed deaths over the previous week. Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "tab": "map",
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                1,
+                5,
+                10,
+                50,
+                100,
+                500
+              ],
+              "baseColorScheme": "OrRd"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "biweekly_cases_per_million": {
+      "title": "Biweekly cases per million people",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "cases per million people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0,
+        "tolerance": 30
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Biweekly confirmed COVID-19 cases per million people",
+          "subtitle": "Biweekly confirmed cases refer to the cumulative number of confirmed cases over the previous two weeks.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                100,
+                200,
+                500,
+                1000,
+                2000,
+                5000,
+                10000,
+                20000,
+                50000,
+                100000
+              ],
+              "baseColorScheme": "OrRd"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "biweekly_deaths_per_million": {
+      "title": "Biweekly deaths per million people",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "deaths per million people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 30
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Biweekly confirmed COVID-19 deaths per million people",
+          "subtitle": "Biweekly confirmed deaths refer to the cumulative number of confirmed deaths over the previous week. Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "customNumericColorsActive": true,
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                1,
+                5,
+                10,
+                50,
+                100,
+                500
+              ],
+              "baseColorScheme": "OrRd"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "total_deaths_per_100k": {
+      "title": "Total confirmed deaths due to COVID-19 per 100,000 people",
+      "description_short": "Total deaths attributed to COVID-19 per 100,000 people. Counts can include probable deaths, where reported.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "deaths per 100,000 people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 3,
+        "tolerance": 9999,
+        "color": "#565656",
+        "name": "Confirmed COVID-19 deaths (per 100,000)"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Cumulative confirmed COVID-19 deaths per 100,000 people",
+          "subtitle": "Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19."
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "new_deaths_per_100k": {
+      "title": "Daily new confirmed deaths due to COVID-19 per 100,000 people",
+      "description_short": "New deaths attributed to COVID-19 per 100,000 people. Counts can include probable deaths, where reported.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "deaths per 100,000 people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 14
+      },
+      "processing_level": "major",
+      "presentation": {
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "new_cases_7_day_avg_right": {
+      "title": "Daily new confirmed cases due to COVID-19 (rolling 7-day average, right-aligned)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "cases",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 14
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Daily new confirmed COVID-19 cases",
+          "subtitle": "7-day rolling average. Due to limited testing, the number of confirmed cases is lower than the true number of infections.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                100,
+                300,
+                1000,
+                3000,
+                10000,
+                30000,
+                100000,
+                300000,
+                1000000
+              ],
+              "baseColorScheme": "RdPu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "new_deaths_7_day_avg_right": {
+      "title": "Daily new confirmed deaths due to COVID-19 (rolling 7-day average, right-aligned)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "deaths",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "name": "Confirmed COVID-19 deaths",
+        "numDecimalPlaces": 2,
+        "tolerance": 14,
+        "color": "#565656"
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Daily new confirmed COVID-19 deaths",
+          "subtitle": "7-day rolling average. Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                1,
+                3,
+                10,
+                30,
+                100,
+                300,
+                1000,
+                3000,
+                10000
+              ],
+              "baseColorScheme": "RdPu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "new_cases_per_million_7_day_avg_right": {
+      "title": "Daily new confirmed cases of COVID-19 per million people (rolling 7-day average, right-aligned)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "cases per million people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "name": "New cases (per 1M)",
+        "numDecimalPlaces": 3,
+        "tolerance": 14
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Daily new confirmed COVID-19 cases per million people",
+          "subtitle": "7-day rolling average. Due to limited testing, the number of confirmed cases is lower than the true number of infections.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                10,
+                20,
+                50,
+                100,
+                200,
+                500,
+                1000,
+                2000,
+                5000,
+                10000
+              ],
+              "baseColorScheme": "OrRd"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "new_deaths_per_million_7_day_avg_right": {
+      "title": "Daily new confirmed deaths due to COVID-19 per million people (rolling 7-day average, right-aligned)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "deaths per million people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "name": "New deaths (per 1M)",
+        "numDecimalPlaces": 2,
+        "tolerance": 14,
+        "color": "#565656"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Daily new confirmed COVID-19 deaths per million people",
+          "subtitle": "7-day rolling average. Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                0.1,
+                0.2,
+                0.5,
+                1,
+                2,
+                5,
+                10,
+                20,
+                50,
+                100
+              ],
+              "baseColorScheme": "OrRd"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "new_deaths_per_100k_7_day_avg_right": {
+      "title": "Daily new confirmed deaths due to COVID-19 per 100,000 people (rolling 7-day average, right-aligned)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "deaths per 100,000 people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "name": "Confirmed COVID-19 deaths (per 100,000)",
+        "numDecimalPlaces": 3,
+        "tolerance": 14,
+        "color": "#565656"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "cfr": {
+      "title": "Case fatality rate of COVID-19 (%)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "%",
+      "short_unit": "%",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 2
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Case fatality rate of COVID-19",
+          "subtitle": "The case fatality rate (CFR) is the ratio between confirmed deaths and confirmed cases. The CFR can be a poor measure of the mortality risk of the disease.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "customNumericColorsActive": true,
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                0.1,
+                0.2,
+                0.5,
+                1,
+                2,
+                5,
+                10,
+                20
+              ],
+              "baseColorScheme": "YlGnBu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "cfr_100_cases": {
+      "title": "Case fatality rate of COVID-19 (%) (Only observations with \u2265100 cases)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "%",
+      "short_unit": "%",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 14
+      },
+      "presentation": {
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "cfr_short_term": {
+      "title": "Case fatality rate of COVID-19 (short-term, %)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "%",
+      "short_unit": "%",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 2
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Moving-average case fatality rate of COVID-19",
+          "subtitle": "The case fatality rate (CFR) is the ratio between confirmed deaths and confirmed cases. Our rolling-average CFR is calculated as the ratio between the 7-day average number of deaths and the 7-day average number of cases 10 days earlier.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "customNumericColorsActive": true,
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                0.5,
+                1,
+                1.5,
+                2,
+                2.5,
+                3,
+                3.5,
+                4,
+                4.5,
+                5
+              ],
+              "baseColorScheme": "Reds"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "We compute number of deaths divided by number of cases 10 days before."
+    },
+    "days_since_100_total_cases": {
+      "title": "Days since the total confirmed cases of COVID-19 reached 100",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "days",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0
+      },
+      "presentation": {
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "days_since_5_total_deaths": {
+      "title": "Days since the total confirmed deaths of COVID-19 reached 5",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "days",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0
+      },
+      "presentation": {
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "days_since_1_total_cases_per_million": {
+      "title": "Days since the total confirmed cases of COVID-19 per million people reached 1",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "days",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0
+      },
+      "processing_level": "major",
+      "presentation": {
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "days_since_0_1_total_deaths_per_million": {
+      "title": "Days since the total confirmed deaths of COVID-19 per million people reached 0.1",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "days",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0
+      },
+      "processing_level": "major",
+      "presentation": {
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "days_since_100_total_cases_and_5m_pop": {
+      "title": "Days since the total confirmed cases of COVID-19 reached 100 (with population \u2265 5M)",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "days",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0
+      },
+      "presentation": {
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "total_deaths_last12m": {
+      "title": "Total confirmed deaths due to COVID-19 (last 12 months)",
+      "description_short": "Total deaths attributed to COVID-19. Counts can include probable deaths, where reported.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        }
+      ],
+      "unit": "deaths",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 0,
+        "name": "Confirmed COVID-19 deaths",
+        "tolerance": 9999,
+        "color": "#565656"
+      },
+      "presentation": {
+        "grapher_config": {
+          "title": "Cumulative confirmed COVID-19 deaths in the last 12 months",
+          "subtitle": "Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "customNumericColorsActive": true,
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                300,
+                1000,
+                3000,
+                10000,
+                30000,
+                100000,
+                300000,
+                1000000
+              ],
+              "baseColorScheme": "RdPu"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      }
+    },
+    "total_deaths_per_100k_last12m": {
+      "title": "Total confirmed deaths due to COVID-19 per 100,000 people (last 12 months)",
+      "description_short": "Total deaths attributed to COVID-19 per 100,000 people. Counts can include probable deaths, where reported.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "deaths per 100,000 people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 9999,
+        "color": "#565656",
+        "name": "Confirmed COVID-19 deaths (per 100,000)"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    },
+    "total_deaths_per_million_last12m": {
+      "title": "Total confirmed deaths due to COVID-19 per million people (last 12 months)",
+      "description_short": "Total deaths attributed to COVID-19 per 1,000,000 people. Counts can include probable deaths, where reported.",
+      "origins": [
+        {
+          "producer": "World Health Organization",
+          "title": "COVID-19 Dashboard",
+          "description": "Daily COVID-19 cases and deaths by date reported to WHO",
+          "description_snapshot": "From the 31 December 2019 to the 21 March 2020, WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts. Since 22 March 2020, global data is compiled through WHO region-specific dashboards, and/or aggregate count data reported to WHO headquarters.\n\nWHO COVID-19 Dashboard is updated every Friday for the period of two weeks prior.\n\nCounts primarily reflect laboratory-confirmed cases and deaths, based upon WHO case definitions; although some departures may exist due to local adaptations. Counts include both domestic and repatriated cases. Case detection, definitions, testing strategies, reporting practice, and lag times (e.g. time to case notification, and time to reporting of deaths) differ between countries, territories and areas. These factors, amongst others, influence the counts presented with variable under or overestimation of true case and death counts, and variable delays to reflecting these data at a global level.\n\nAll data represent date of reporting as opposed to date of symptom onset. All data are subject to continuous verification and may change based on retrospective updates to accurately reflect trends, changes in country case definitions and/or reporting practices. Significant data errors detected or reported to WHO may be corrected at more frequent intervals.\n\n**New case and death counts from the Region of the Americas**\nStarting from the week commencing on 11 September 2023, the source of the data from the Region of the Americas was switched to the aggregated national surveillances, received through the COVID-19, Influenza, RSV and Other Respiratory Viruses program in the Americas. Data have been included retrospectively since 31 July 2023.\n\n**Rates**\n<0.001 per 100,000 population may be rounded to 0.",
+          "citation_full": "WHO COVID-19 Dashboard. Geneva: World Health Organization, 2020. Available online: https://covid19.who.int/",
+          "attribution_short": "WHO",
+          "version_producer": "WHO COVID-19 Dashboard - Daily cases and deaths",
+          "url_main": "https://covid19.who.int/",
+          "url_download": "https://srhdpeuwpubsa.blob.core.windows.net/whdh/COVID/WHO-COVID-19-global-daily-data.csv",
+          "date_accessed": "2025-01-22",
+          "date_published": "2024-07-07",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://data.who.int/dashboards/covid19/"
+          }
+        },
+        {
+          "producer": "Various sources",
+          "title": "Population",
+          "description": "Our World in Data builds and maintains a long-run dataset on population by country, region, and for the world, based on various sources.\n\nYou can find more information on these sources and how our time series is constructed on this page: https://ourworldindata.org/population-sources",
+          "citation_full": "The long-run data on population is based on various sources, described on this page: https://ourworldindata.org/population-sources",
+          "attribution": "Population based on various sources (2024)",
+          "attribution_short": "Population",
+          "url_main": "https://ourworldindata.org/population-sources",
+          "date_accessed": "2024-07-11",
+          "date_published": "2024-07-15",
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        }
+      ],
+      "licenses": [
+        {
+          "name": "Creative Commons BY 4.0",
+          "url": "https://docs.google.com/document/d/1-RmthhS2EPMK_HIpnPctcXpB0n7ADSWnXa5Hb3PxNq4/edit?usp=sharing"
+        }
+      ],
+      "unit": "deaths per million people",
+      "display": {
+        "zeroDay": "2020-01-21",
+        "yearIsDay": true,
+        "numDecimalPlaces": 2,
+        "tolerance": 9999,
+        "color": "#565656"
+      },
+      "processing_level": "major",
+      "presentation": {
+        "grapher_config": {
+          "title": "Cumulative confirmed COVID-19 deaths per million people in the last 12 months",
+          "subtitle": "Due to varying protocols and challenges in the attribution of the cause of death, the number of confirmed deaths may not accurately represent the true number of deaths caused by COVID-19.",
+          "hasMapTab": true,
+          "map": {
+            "colorScale": {
+              "customNumericColorsActive": true,
+              "binningStrategy": "manual",
+              "customNumericValues": [
+                300,
+                600,
+                900,
+                1200,
+                1500,
+                1800,
+                2100,
+                2400,
+                2700,
+                3000
+              ],
+              "baseColorScheme": "OrRd"
+            }
+          }
+        },
+        "topic_tags": [
+          "COVID-19",
+          "Global Health"
+        ]
+      },
+      "description_processing": "This indicator is estimated by normalizing by population. We have used daily population estimates, which leads to changes in the denominator between datapoints from different days. For instance, the denominator for January 1st will be different to the one on January 2nd."
+    }
+  }
+}

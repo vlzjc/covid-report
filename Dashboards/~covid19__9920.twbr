@@ -1,0 +1,1803 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <CascadingFilters />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='covid19_17377686885900' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='date+ (covidreport)' inline='true' name='federated.0tlk5161epizx11fo0gt61vd1n97' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='covidreport' name='excel-direct.1afccuy06mnakn1c5s26j0pramz0'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/GITRepo/covid-report/covidreport.xlsx' interpretationMode='0' password='' server='' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.1afccuy06mnakn1c5s26j0pramz0' name='date' table='[date$]' type='table'>
+            <columns gridOrigin='A1:D2193:no:A1:D2193:0' header='yes' outcome='6'>
+              <column datatype='date' name='date' ordinal='0' />
+              <column datatype='integer' name='year' ordinal='1' />
+              <column datatype='string' name='month' ordinal='2' />
+              <column datatype='string' name='month_year' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1afccuy06mnakn1c5s26j0pramz0' name='cases_deaths' table='[cases_deaths$]' type='table'>
+            <columns gridOrigin='A1:E10001:no:A1:E10001:0' header='yes' outcome='6'>
+              <column datatype='string' name='Place' ordinal='0' />
+              <column datatype='string' name='Continent' ordinal='1' />
+              <column datatype='date' name='date' ordinal='2' />
+              <column datatype='integer' name='new_cases' ordinal='3' />
+              <column datatype='integer' name='new_deaths' ordinal='4' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1afccuy06mnakn1c5s26j0pramz0' name='tests' table='[tests$]' type='table'>
+            <columns gridOrigin='A1:D10001:no:A1:D10001:0' header='yes' outcome='6'>
+              <column datatype='string' name='country' ordinal='0' />
+              <column datatype='string' name='Continent' ordinal='1' />
+              <column datatype='date' name='date' ordinal='2' />
+              <column datatype='integer' name='new_tests' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1afccuy06mnakn1c5s26j0pramz0' name='vaxx' table='[vaxx$]' type='table'>
+            <columns gridOrigin='A1:F10001:no:A1:F10001:0' header='yes' outcome='6'>
+              <column datatype='string' name='Place' ordinal='0' />
+              <column datatype='string' name='Continent' ordinal='1' />
+              <column datatype='date' name='date' ordinal='2' />
+              <column datatype='integer' name='people_vaccinated' ordinal='3' />
+              <column datatype='integer' name='people_fully_vaccinated' ordinal='4' />
+              <column datatype='integer' name='daily_vaccinations' ordinal='5' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Continent (tests)]' value='[tests].[Continent]' />
+          <map key='[Continent (vaxx)]' value='[vaxx].[Continent]' />
+          <map key='[Continent]' value='[cases_deaths].[Continent]' />
+          <map key='[Place (vaxx)]' value='[vaxx].[Place]' />
+          <map key='[Place]' value='[cases_deaths].[Place]' />
+          <map key='[country]' value='[tests].[country]' />
+          <map key='[daily_vaccinations]' value='[vaxx].[daily_vaccinations]' />
+          <map key='[date (cases!deaths)]' value='[cases_deaths].[date]' />
+          <map key='[date (tests)]' value='[tests].[date]' />
+          <map key='[date (vaxx)]' value='[vaxx].[date]' />
+          <map key='[date]' value='[date].[date]' />
+          <map key='[month]' value='[date].[month]' />
+          <map key='[month_year]' value='[date].[month_year]' />
+          <map key='[new_cases]' value='[cases_deaths].[new_cases]' />
+          <map key='[new_deaths]' value='[cases_deaths].[new_deaths]' />
+          <map key='[new_tests]' value='[tests].[new_tests]' />
+          <map key='[people_fully_vaccinated]' value='[vaxx].[people_fully_vaccinated]' />
+          <map key='[people_vaccinated]' value='[vaxx].[people_vaccinated]' />
+          <map key='[year]' value='[date].[year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[date]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D2193:no:A1:D2193:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cases_deaths]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E10001:no:A1:E10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[tests]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D10001:no:A1:D10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[vaxx]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F10001:no:A1:F10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[date]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[date_A446BE38648141C58B7C171607CF6B93]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[date]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[date_A446BE38648141C58B7C171607CF6B93]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[date]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[date_A446BE38648141C58B7C171607CF6B93]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[month_year]</local-name>
+            <parent-name>[date]</parent-name>
+            <remote-alias>month_year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[date_A446BE38648141C58B7C171607CF6B93]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Place</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Place]</local-name>
+            <parent-name>[cases_deaths]</parent-name>
+            <remote-alias>Place</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Continent</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Continent]</local-name>
+            <parent-name>[cases_deaths]</parent-name>
+            <remote-alias>Continent</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date (cases!deaths)]</local-name>
+            <parent-name>[cases_deaths]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_cases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[new_cases]</local-name>
+            <parent-name>[cases_deaths]</parent-name>
+            <remote-alias>new_cases</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_deaths</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[new_deaths]</local-name>
+            <parent-name>[cases_deaths]</parent-name>
+            <remote-alias>new_deaths</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[tests]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[tests_78227C1FD52243E1BEE1FABE08956B8D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Continent</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Continent (tests)]</local-name>
+            <parent-name>[tests]</parent-name>
+            <remote-alias>Continent</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[tests_78227C1FD52243E1BEE1FABE08956B8D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date (tests)]</local-name>
+            <parent-name>[tests]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[tests_78227C1FD52243E1BEE1FABE08956B8D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_tests</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[new_tests]</local-name>
+            <parent-name>[tests]</parent-name>
+            <remote-alias>new_tests</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[tests_78227C1FD52243E1BEE1FABE08956B8D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Place</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Place (vaxx)]</local-name>
+            <parent-name>[vaxx]</parent-name>
+            <remote-alias>Place</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Continent</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Continent (vaxx)]</local-name>
+            <parent-name>[vaxx]</parent-name>
+            <remote-alias>Continent</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date (vaxx)]</local-name>
+            <parent-name>[vaxx]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_vaccinated</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[people_vaccinated]</local-name>
+            <parent-name>[vaxx]</parent-name>
+            <remote-alias>people_vaccinated</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_fully_vaccinated</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[people_fully_vaccinated]</local-name>
+            <parent-name>[vaxx]</parent-name>
+            <remote-alias>people_fully_vaccinated</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>daily_vaccinations</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[daily_vaccinations]</local-name>
+            <parent-name>[vaxx]</parent-name>
+            <remote-alias>daily_vaccinations</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Continent (tests)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Continent (vaxx)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Continent]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column datatype='string' name='[Place]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column caption='cases_deaths' datatype='table' name='[__tableau_internal_object_id__].[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]' role='measure' type='quantitative' />
+      <column caption='date' datatype='table' name='[__tableau_internal_object_id__].[date_A446BE38648141C58B7C171607CF6B93]' role='measure' type='quantitative' />
+      <column caption='tests' datatype='table' name='[__tableau_internal_object_id__].[tests_78227C1FD52243E1BEE1FABE08956B8D]' role='measure' type='quantitative' />
+      <column caption='vaxx' datatype='table' name='[__tableau_internal_object_id__].[vaxx_C1B1899ECCC7497081425C0A1BD451FA]' role='measure' type='quantitative' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Daily Vaccinations' datatype='integer' name='[daily_vaccinations]' role='measure' type='quantitative' />
+      <column caption='Date (Cases!Deaths)' datatype='date' name='[date (cases!deaths)]' role='dimension' type='ordinal' />
+      <column caption='Date (Tests)' datatype='date' name='[date (tests)]' role='dimension' type='ordinal' />
+      <column caption='Date (Vaxx)' datatype='date' name='[date (vaxx)]' role='dimension' type='ordinal' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Month' datatype='string' name='[month]' role='dimension' type='nominal' />
+      <column caption='Month Year' datatype='string' name='[month_year]' role='dimension' type='nominal' />
+      <column caption='New Cases' datatype='integer' name='[new_cases]' role='measure' type='quantitative' />
+      <column caption='New Deaths' datatype='integer' name='[new_deaths]' role='measure' type='quantitative' />
+      <column caption='New Tests' datatype='integer' name='[new_tests]' role='measure' type='quantitative' />
+      <column caption='People Fully Vaccinated' datatype='integer' name='[people_fully_vaccinated]' role='measure' type='quantitative' />
+      <column caption='People Vaccinated' datatype='integer' name='[people_vaccinated]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[Continent (tests)]' derivation='None' name='[none:Continent (tests):nk]' pivot='key' type='nominal' />
+      <column-instance column='[Continent (vaxx)]' derivation='None' name='[none:Continent (vaxx):nk]' pivot='key' type='nominal' />
+      <column-instance column='[Continent]' derivation='None' name='[none:Continent:nk]' pivot='key' type='nominal' />
+      <drill-paths>
+        <drill-path name='Continent'>
+          <field>[Continent]</field>
+          <field>[Place]</field>
+        </drill-path>
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='D:/AppData/Local/Temp/TableauTemp/#TableauTemp_1lszhqw091jhrw199vf211bc4gzi.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='date_A446BE38648141C58B7C171607CF6B93' table='[Extract].[date_A446BE38648141C58B7C171607CF6B93]' type='table' />
+            <relation name='cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71' table='[Extract].[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]' type='table' />
+            <relation name='tests_78227C1FD52243E1BEE1FABE08956B8D' table='[Extract].[tests_78227C1FD52243E1BEE1FABE08956B8D]' type='table' />
+            <relation name='vaxx_C1B1899ECCC7497081425C0A1BD451FA' table='[Extract].[vaxx_C1B1899ECCC7497081425C0A1BD451FA]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Continent (tests)]' value='[tests_78227C1FD52243E1BEE1FABE08956B8D].[Continent]' />
+            <map key='[Continent (vaxx)]' value='[vaxx_C1B1899ECCC7497081425C0A1BD451FA].[Continent]' />
+            <map key='[Continent]' value='[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71].[Continent]' />
+            <map key='[Place (vaxx)]' value='[vaxx_C1B1899ECCC7497081425C0A1BD451FA].[Place]' />
+            <map key='[Place]' value='[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71].[Place]' />
+            <map key='[country]' value='[tests_78227C1FD52243E1BEE1FABE08956B8D].[country]' />
+            <map key='[daily_vaccinations]' value='[vaxx_C1B1899ECCC7497081425C0A1BD451FA].[daily_vaccinations]' />
+            <map key='[date (cases!deaths)]' value='[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71].[date]' />
+            <map key='[date (tests)]' value='[tests_78227C1FD52243E1BEE1FABE08956B8D].[date]' />
+            <map key='[date (vaxx)]' value='[vaxx_C1B1899ECCC7497081425C0A1BD451FA].[date]' />
+            <map key='[date]' value='[date_A446BE38648141C58B7C171607CF6B93].[date]' />
+            <map key='[month]' value='[date_A446BE38648141C58B7C171607CF6B93].[month]' />
+            <map key='[month_year]' value='[date_A446BE38648141C58B7C171607CF6B93].[month_year]' />
+            <map key='[new_cases]' value='[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71].[new_cases]' />
+            <map key='[new_deaths]' value='[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71].[new_deaths]' />
+            <map key='[new_tests]' value='[tests_78227C1FD52243E1BEE1FABE08956B8D].[new_tests]' />
+            <map key='[people_fully_vaccinated]' value='[vaxx_C1B1899ECCC7497081425C0A1BD451FA].[people_fully_vaccinated]' />
+            <map key='[people_vaccinated]' value='[vaxx_C1B1899ECCC7497081425C0A1BD451FA].[people_vaccinated]' />
+            <map key='[year]' value='[date_A446BE38648141C58B7C171607CF6B93].[year]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[date_A446BE38648141C58B7C171607CF6B93]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>date</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>2192</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[date_A446BE38648141C58B7C171607CF6B93]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>1</ordinal>
+              <family>date</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[month]</local-name>
+              <parent-name>[date_A446BE38648141C58B7C171607CF6B93]</parent-name>
+              <remote-alias>month</remote-alias>
+              <ordinal>2</ordinal>
+              <family>date</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month_year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[month_year]</local-name>
+              <parent-name>[date_A446BE38648141C58B7C171607CF6B93]</parent-name>
+              <remote-alias>month_year</remote-alias>
+              <ordinal>3</ordinal>
+              <family>date</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>72</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Place</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Place]</local-name>
+              <parent-name>[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]</parent-name>
+              <remote-alias>Place</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cases_deaths</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>246</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Continent</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Continent]</local-name>
+              <parent-name>[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]</parent-name>
+              <remote-alias>Continent</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cases_deaths</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date (cases!deaths)]</local-name>
+              <parent-name>[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cases_deaths</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>10281</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>new_cases</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[new_cases]</local-name>
+              <parent-name>[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]</parent-name>
+              <remote-alias>new_cases</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cases_deaths</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10861</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>new_deaths</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[new_deaths]</local-name>
+              <parent-name>[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]</parent-name>
+              <remote-alias>new_deaths</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cases_deaths</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1033</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[country]</local-name>
+              <parent-name>[tests_78227C1FD52243E1BEE1FABE08956B8D]</parent-name>
+              <remote-alias>country</remote-alias>
+              <ordinal>9</ordinal>
+              <family>tests</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>291</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Continent</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Continent (tests)]</local-name>
+              <parent-name>[tests_78227C1FD52243E1BEE1FABE08956B8D]</parent-name>
+              <remote-alias>Continent</remote-alias>
+              <ordinal>10</ordinal>
+              <family>tests</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date (tests)]</local-name>
+              <parent-name>[tests_78227C1FD52243E1BEE1FABE08956B8D]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>11</ordinal>
+              <family>tests</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>3474</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>new_tests</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[new_tests]</local-name>
+              <parent-name>[tests_78227C1FD52243E1BEE1FABE08956B8D]</parent-name>
+              <remote-alias>new_tests</remote-alias>
+              <ordinal>12</ordinal>
+              <family>tests</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>30459</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Place</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Place (vaxx)]</local-name>
+              <parent-name>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</parent-name>
+              <remote-alias>Place</remote-alias>
+              <ordinal>13</ordinal>
+              <family>vaxx</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>414</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Continent</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Continent (vaxx)]</local-name>
+              <parent-name>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</parent-name>
+              <remote-alias>Continent</remote-alias>
+              <ordinal>14</ordinal>
+              <family>vaxx</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date (vaxx)]</local-name>
+              <parent-name>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>15</ordinal>
+              <family>vaxx</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>5940</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>people_vaccinated</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[people_vaccinated]</local-name>
+              <parent-name>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</parent-name>
+              <remote-alias>people_vaccinated</remote-alias>
+              <ordinal>16</ordinal>
+              <family>vaxx</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>88323</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>people_fully_vaccinated</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[people_fully_vaccinated]</local-name>
+              <parent-name>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</parent-name>
+              <remote-alias>people_fully_vaccinated</remote-alias>
+              <ordinal>17</ordinal>
+              <family>vaxx</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>86372</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>daily_vaccinations</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[daily_vaccinations]</local-name>
+              <parent-name>[vaxx_C1B1899ECCC7497081425C0A1BD451FA]</parent-name>
+              <remote-alias>daily_vaccinations</remote-alias>
+              <ordinal>18</ordinal>
+              <family>vaxx</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>27324</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout common-percentage='1' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Continent:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Africa&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Ocenia&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;North America&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Europe&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;South America&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Asia&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Continent (vaxx):nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Africa&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Ocenia&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;North America&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Europe&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;South America&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Asia&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Continent (tests):nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Africa&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Ocenia&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;North America&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Europe&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;South America&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Asia&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Philippines&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='cases_deaths' id='cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71'>
+            <properties context=''>
+              <relation connection='excel-direct.1afccuy06mnakn1c5s26j0pramz0' name='cases_deaths' table='[cases_deaths$]' type='table'>
+                <columns gridOrigin='A1:E10001:no:A1:E10001:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Place' ordinal='0' />
+                  <column datatype='string' name='Continent' ordinal='1' />
+                  <column datatype='date' name='date' ordinal='2' />
+                  <column datatype='integer' name='new_cases' ordinal='3' />
+                  <column datatype='integer' name='new_deaths' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71' table='[Extract].[cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71]' type='table' />
+            </properties>
+          </object>
+          <object caption='date' id='date_A446BE38648141C58B7C171607CF6B93'>
+            <properties context=''>
+              <relation connection='excel-direct.1afccuy06mnakn1c5s26j0pramz0' name='date' table='[date$]' type='table'>
+                <columns gridOrigin='A1:D2193:no:A1:D2193:0' header='yes' outcome='6'>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='integer' name='year' ordinal='1' />
+                  <column datatype='string' name='month' ordinal='2' />
+                  <column datatype='string' name='month_year' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='date_A446BE38648141C58B7C171607CF6B93' table='[Extract].[date_A446BE38648141C58B7C171607CF6B93]' type='table' />
+            </properties>
+          </object>
+          <object caption='tests' id='tests_78227C1FD52243E1BEE1FABE08956B8D'>
+            <properties context=''>
+              <relation connection='excel-direct.1afccuy06mnakn1c5s26j0pramz0' name='tests' table='[tests$]' type='table'>
+                <columns gridOrigin='A1:D10001:no:A1:D10001:0' header='yes' outcome='6'>
+                  <column datatype='string' name='country' ordinal='0' />
+                  <column datatype='string' name='Continent' ordinal='1' />
+                  <column datatype='date' name='date' ordinal='2' />
+                  <column datatype='integer' name='new_tests' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='tests_78227C1FD52243E1BEE1FABE08956B8D' table='[Extract].[tests_78227C1FD52243E1BEE1FABE08956B8D]' type='table' />
+            </properties>
+          </object>
+          <object caption='vaxx' id='vaxx_C1B1899ECCC7497081425C0A1BD451FA'>
+            <properties context=''>
+              <relation connection='excel-direct.1afccuy06mnakn1c5s26j0pramz0' name='vaxx' table='[vaxx$]' type='table'>
+                <columns gridOrigin='A1:F10001:no:A1:F10001:0' header='yes' outcome='6'>
+                  <column datatype='string' name='Place' ordinal='0' />
+                  <column datatype='string' name='Continent' ordinal='1' />
+                  <column datatype='date' name='date' ordinal='2' />
+                  <column datatype='integer' name='people_vaccinated' ordinal='3' />
+                  <column datatype='integer' name='people_fully_vaccinated' ordinal='4' />
+                  <column datatype='integer' name='daily_vaccinations' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='vaxx_C1B1899ECCC7497081425C0A1BD451FA' table='[Extract].[vaxx_C1B1899ECCC7497081425C0A1BD451FA]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[date]' />
+              <expression op='[date (cases!deaths)]' />
+            </expression>
+            <first-end-point object-id='date_A446BE38648141C58B7C171607CF6B93' />
+            <second-end-point object-id='cases!deaths_84561FB9E0934C5795AEB37BD2BF6D71' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[date]' />
+              <expression op='[date (tests)]' />
+            </expression>
+            <first-end-point object-id='date_A446BE38648141C58B7C171607CF6B93' />
+            <second-end-point object-id='tests_78227C1FD52243E1BEE1FABE08956B8D' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[date]' />
+              <expression op='[date (vaxx)]' />
+            </expression>
+            <first-end-point object-id='date_A446BE38648141C58B7C171607CF6B93' />
+            <second-end-point object-id='vaxx_C1B1899ECCC7497081425C0A1BD451FA' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.0tlk5161epizx11fo0gt61vd1n97'>
+      <datasources>
+        <datasource caption='date+ (covidreport)' name='federated.0tlk5161epizx11fo0gt61vd1n97' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0tlk5161epizx11fo0gt61vd1n97'>
+        <column datatype='string' name='[Continent]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+        <column-instance column='[Continent]' derivation='None' name='[none:Continent:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]'>
+        <groupfilter function='level-members' level='[none:Continent:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1_FF67544249BF494BB273CD67F1586D22]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Continent' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Cases Recorded Chart'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='date+ (covidreport)' name='federated.0tlk5161epizx11fo0gt61vd1n97' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0tlk5161epizx11fo0gt61vd1n97'>
+            <column datatype='string' name='[Continent]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column caption='Date (Cases!Deaths)' datatype='date' name='[date (cases!deaths)]' role='dimension' type='ordinal' />
+            <column caption='New Cases' datatype='integer' name='[new_cases]' role='measure' type='quantitative' />
+            <column-instance column='[Continent]' derivation='None' name='[none:Continent:nk]' pivot='key' type='nominal' />
+            <column-instance column='[new_cases]' derivation='Sum' name='[sum:new_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date (cases!deaths)]' derivation='Month-Trunc' name='[tmn:date (cases!deaths):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='auto-subtitle' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_cases:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_cases:qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date (cases!deaths):qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_cases:qk]</rows>
+        <cols>[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date (cases!deaths):qk]</cols>
+      </table>
+      <simple-id uuid='{AA15A873-809B-4CE2-8CF7-D1391AABE021}' />
+    </worksheet>
+    <worksheet name='Recorded Cases'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='date+ (covidreport)' name='federated.0tlk5161epizx11fo0gt61vd1n97' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0tlk5161epizx11fo0gt61vd1n97'>
+            <column datatype='string' name='[Continent]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column datatype='string' name='[Place]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column caption='Date (Cases!Deaths)' datatype='date' name='[date (cases!deaths)]' role='dimension' type='ordinal' />
+            <column caption='New Cases' datatype='integer' name='[new_cases]' role='measure' type='quantitative' />
+            <column-instance column='[Continent]' derivation='None' name='[none:Continent:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Place]' derivation='None' name='[none:Place:nk]' pivot='key' type='nominal' />
+            <column-instance column='[new_cases]' derivation='Sum' name='[sum:new_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date (cases!deaths)]' derivation='Month-Trunc' name='[tmn:date (cases!deaths):ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Place:nk]'>
+            <groupfilter function='level-members' level='[none:Place:nk]' />
+          </filter>
+          <filter class='quantitative' column='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_cases:qk]' included-values='in-range' />
+          <slices>
+            <column>[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_cases:qk]</column>
+            <column>[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Place:nk]</column>
+            <column>[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[Longitude (generated)]' field-type='quantitative' max='22343928.389548399' min='-17731088.296030104' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[Latitude (generated)]' field-type='quantitative' max='15410211.338553233' min='-10757752.097220669' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' center='85000' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_cases:qk]' max='1000000' min='0' num-steps='14' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#e6e6e6</color>
+                <color>#e3e3e3</color>
+                <color>#e1e1e1</color>
+                <color>#dfdfdf</color>
+                <color>#dddddd</color>
+                <color>#dbdbdb</color>
+                <color>#d9d9d9</color>
+                <color>#c5a4a4</color>
+                <color>#b17676</color>
+                <color>#9d4e4e</color>
+                <color>#8a2e2e</color>
+                <color>#761313</color>
+                <color>#630000</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+          <style-rule element='page-card-title'>
+            <format attr='title' value=''>
+              <formatted-text />
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_cases:qk]' />
+              <lod column='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' />
+              <lod column='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Place:nk]' />
+              <geometry column='[federated.0tlk5161epizx11fo0gt61vd1n97].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0tlk5161epizx11fo0gt61vd1n97].[Latitude (generated)]</rows>
+        <cols>[federated.0tlk5161epizx11fo0gt61vd1n97].[Longitude (generated)]</cols>
+        <pages>
+          <column>[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date (cases!deaths):ok]</column>
+        </pages>
+      </table>
+      <simple-id uuid='{BA015A15-D302-4A20-BE19-6EC7BBED5C6D}' />
+    </worksheet>
+    <worksheet name='Reported Mortalities'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='date+ (covidreport)' name='federated.0tlk5161epizx11fo0gt61vd1n97' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0tlk5161epizx11fo0gt61vd1n97'>
+            <column datatype='string' name='[Continent]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column caption='Date (Cases!Deaths)' datatype='date' name='[date (cases!deaths)]' role='dimension' type='ordinal' />
+            <column caption='New Deaths' datatype='integer' name='[new_deaths]' role='measure' type='quantitative' />
+            <column-instance column='[Continent]' derivation='None' name='[none:Continent:nk]' pivot='key' type='nominal' />
+            <column-instance column='[new_deaths]' derivation='Sum' name='[sum:new_deaths:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date (cases!deaths)]' derivation='Month-Trunc' name='[tmn:date (cases!deaths):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date (cases!deaths):qk]' scope='cols' value='true' />
+            <format attr='title' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_deaths:qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date (cases!deaths):qk]' scope='cols' value='' />
+            <encoding attr='space' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date (cases!deaths):qk]' field-type='quantitative' max='#2025-11-11 13:52:42.538#' min='#2018-12-15 19:40:39.366#' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_deaths:qk]' field-type='quantitative' max='212369' min='-34375' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date (cases!deaths):qk]' value='*mmmm yyyy' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_deaths:qk]</rows>
+        <cols>[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date (cases!deaths):qk]</cols>
+      </table>
+      <simple-id uuid='{980756B4-1186-4A9D-BF66-0973B097CC00}' />
+    </worksheet>
+    <worksheet name='Testing'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='date+ (covidreport)' name='federated.0tlk5161epizx11fo0gt61vd1n97' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tlk5161epizx11fo0gt61vd1n97'>
+            <column datatype='string' name='[Continent]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column datatype='string' name='[Place]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column caption='Date (Tests)' datatype='date' name='[date (tests)]' role='dimension' type='ordinal' />
+            <column caption='New Tests' datatype='integer' name='[new_tests]' role='measure' type='quantitative' />
+            <column-instance column='[Continent]' derivation='None' name='[none:Continent:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Place]' derivation='None' name='[none:Place:nk]' pivot='key' type='nominal' />
+            <column-instance column='[new_tests]' derivation='Sum' name='[sum:new_tests:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date (tests)]' derivation='Month-Trunc' name='[tmn:date (tests):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date (tests):qk]' scope='cols' value='' />
+            <format attr='title' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_tests:qk]' scope='rows' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' />
+              <lod column='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Place:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_tests:qk]</rows>
+        <cols>[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date (tests):qk]</cols>
+      </table>
+      <simple-id uuid='{BE4A1636-CE6D-498E-B6AA-C8EFAE4B9905}' />
+    </worksheet>
+    <worksheet name='Vaccinations'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='date+ (covidreport)' name='federated.0tlk5161epizx11fo0gt61vd1n97' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tlk5161epizx11fo0gt61vd1n97'>
+            <column datatype='string' name='[Continent]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column caption='Daily Vaccinations' datatype='integer' name='[daily_vaccinations]' role='measure' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[Continent]' derivation='None' name='[none:Continent:nk]' pivot='key' type='nominal' />
+            <column-instance column='[daily_vaccinations]' derivation='Sum' name='[sum:daily_vaccinations:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Month-Trunc' name='[tmn:date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date:qk]' scope='cols' value='' />
+            <format attr='title' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:daily_vaccinations:qk]' scope='rows' value='' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:daily_vaccinations:qk]</rows>
+        <cols>[federated.0tlk5161epizx11fo0gt61vd1n97].[tmn:date:qk]</cols>
+      </table>
+      <simple-id uuid='{5920C3B3-4FC6-441D-BA1F-5305E4AC22D4}' />
+    </worksheet>
+    <worksheet name='regions'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='date+ (covidreport)' name='federated.0tlk5161epizx11fo0gt61vd1n97' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tlk5161epizx11fo0gt61vd1n97'>
+            <column caption='1' datatype='integer' name='[Calculation_698057982020739073]' role='measure' type='quantitative' user:unnamed='Sheet 6'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[Continent]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column-instance column='[Continent]' derivation='None' name='[none:Continent:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_698057982020739073]' derivation='Sum' name='[sum:Calculation_698057982020739073:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:Calculation_698057982020739073:qk]' value='12' />
+            <encoding attr='space' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:Calculation_698057982020739073:qk]' field-type='quantitative' major-origin='0' major-show='false' major-spacing='1.0' max='1' min='0' minor-origin='0' minor-show='false' minor-spacing='1.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:Calculation_698057982020739073:qk]' scope='rows' value='' />
+            <format attr='width' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:Calculation_698057982020739073:qk]' value='10' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' value='23' />
+            <format attr='width' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' value='130' />
+            <format attr='color' value='#ffffff' />
+            <format attr='cell-w' value='30' />
+            <format attr='cell-h' value='10' />
+            <format attr='cell' value='10' />
+            <format attr='cell-q' value='50' />
+            <format attr='vertical-align' value='center' />
+            <format attr='font-style' value='normal' />
+            <format attr='text-orientation' value='0' />
+            <format attr='text-align' value='center' />
+            <format attr='wrap' value='on' />
+            <format attr='text-orientation' data-class='total' value='0' />
+            <format attr='font-size' value='8' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='color' data-class='subtotal' scope='cols' value='#f9a655' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' value='false' />
+            <format attr='font-size' scope='rows' value='72' />
+            <format attr='color' scope='rows' value='#d4a6c8' />
+            <format attr='wrap' value='on' />
+            <format attr='text-orientation' value='0' />
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='20' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' />
+              <text column='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='90' />
+                <format attr='maxheight' value='90' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:Calculation_698057982020739073:qk]</rows>
+        <cols>[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]</cols>
+        <mark-labels>
+          <mark-label id='0'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:Calculation_698057982020739073:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]</field>
+                  <field>[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:Calculation_698057982020739073:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;North America&quot;</value>
+                <value>1</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='0.496815' y='0.472222' />
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{5DE2F1D6-8956-4F1C-8B16-67B50C69DEE5}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='720' maxwidth='1280' minheight='720' minwidth='1280' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='71197' id='39' param='horz' type-v2='layout-flow' w='98750' x='625' y='17222'>
+            <zone h='71197' id='37' type-v2='layout-basic' w='98750' x='625' y='17222'>
+              <zone h='37247' id='32' name='Reported Mortalities' w='42891' x='56484' y='51172'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='33950' id='33' name='Vaccinations' w='18204' x='56484' y='17222'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='33950' id='35' name='Testing' w='24687' x='74688' y='17222'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='71197' id='36' name='Recorded Cases' w='55859' x='625' y='17222'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='10470' id='43' type-v2='layout-flow' w='87578' x='5781' y='88419'>
+            <zone dropdown='0' h='6806' id='42' looped='1' name='Recorded Cases' show-title='false' synchronized='1' trailctrls='0' type-v2='currpage' w='87578' x='5781' y='88419'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='10470' id='44' param='horz' type-v2='layout-flow' w='5156' x='625' y='88419' />
+          <zone h='10470' id='45' param='horz' type-v2='layout-flow' w='6016' x='93359' y='88419' />
+          <zone forceUpdate='true' h='7500' id='46' type-v2='text' w='98750' x='625' y='1111'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontsize='26'>COVID 19: A retrospective</run>
+              <run fontalignment='1'>Æ&#10;</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='8611' id='29' name='regions' show-title='false' w='98750' x='625' y='8611'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout name='Desktop'>
+          <size sizing-mode='automatic' />
+          <zones>
+            <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='80347' id='39' param='horz' type-v2='layout-flow' w='98750' x='625' y='8331'>
+                <zone h='80347' id='37' type-v2='layout-basic' w='98750' x='625' y='8331'>
+                  <zone h='9967' id='29' name='regions' show-title='false' w='42891' x='56484' y='78711'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='30892' id='32' name='Reported Mortalities' w='42891' x='56484' y='47819'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='39488' id='33' name='Vaccinations' w='18204' x='56484' y='8331'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='39488' id='35' name='Testing' w='24687' x='74688' y='8331'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='80347' id='36' name='Recorded Cases' w='55859' x='625' y='8331'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='10541' id='43' type-v2='layout-flow' w='87578' x='5781' y='88678'>
+                <zone dropdown='0' h='4785' id='42' looped='1' name='Recorded Cases' show-title='false' synchronized='1' trailctrls='0' type-v2='currpage' w='87578' x='5781' y='88678'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='10541' id='44' param='horz' type-v2='layout-flow' w='5156' x='625' y='88678' />
+              <zone h='10541' id='45' param='horz' type-v2='layout-flow' w='6016' x='93359' y='88678' />
+              <zone forceUpdate='true' h='7550' id='46' type-v2='text' w='98750' x='625' y='781'>
+                <formatted-text>
+                  <run bold='true' fontalignment='1' fontsize='26'>COVID 19: A retrospective</run>
+                  <run fontalignment='1'>Æ&#10;</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+        <devicelayout active='true' name='Tablet'>
+          <size sizing-mode='automatic' />
+          <zones>
+            <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='44667' id='39' param='horz' type-v2='layout-flow' w='97916' x='1042' y='14444'>
+                <zone h='44667' id='37' type-v2='layout-basic' w='97916' x='1042' y='14444'>
+                  <zone h='44667' id='36' name='Recorded Cases' w='97916' x='1042' y='14444'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='7889' id='44' param='horz' type-v2='layout-flow' w='91950' x='1042' y='91222' />
+              <zone h='7889' id='45' param='horz' type-v2='layout-flow' w='5966' x='92992' y='91222' />
+              <zone forceUpdate='true' h='7534' id='46' type-v2='text' w='97916' x='1042' y='889'>
+                <formatted-text>
+                  <run bold='true' fontalignment='1' fontsize='26'>COVID 19: A retrospective</run>
+                  <run fontalignment='1'>Æ&#10;</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8778' id='29' name='regions' show-title='false' w='97916' x='1042' y='82444'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='23333' id='33' name='Vaccinations' w='37239' x='1042' y='59111'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='23333' id='32' name='Reported Mortalities' w='36198' x='38281' y='59111'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='23333' id='35' name='Testing' w='24479' x='74479' y='59111'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone dropdown='0' h='6021' id='42' looped='1' name='Recorded Cases' show-title='false' synchronized='1' trailctrls='0' type-v2='currpage' w='97916' x='1042' y='8423'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{AE37EFCA-1EAD-4D79-9199-385FA2EC50B6}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Cases Recorded Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B7C80FDE-8333-494A-BA99-5D9343560750}' />
+    </window>
+    <window class='worksheet' name='Recorded Cases'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' type='filter' values='cascading' />
+            <card pane-specification-id='0' param='[federated.0tlk5161epizx11fo0gt61vd1n97].[sum:new_cases:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='126'>
+            <card looped='1' show-title='false' type='currpage' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2022-11-01 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
+      <simple-id uuid='{00215FC1-6A42-4089-B800-4247E3AFC51E}' />
+    </window>
+    <window class='worksheet' name='Reported Mortalities'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{27439650-3EB2-4000-B531-66D41AAF5264}' />
+    </window>
+    <window class='worksheet' name='Vaccinations'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5AF4CB64-74B3-43EA-841F-D87EE9CDA2AC}' />
+    </window>
+    <window class='worksheet' name='Testing'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AF795324-F174-4220-8492-C3E50B7F67FE}' />
+    </window>
+    <window class='worksheet' name='regions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' type='filter' values='cascading' />
+            <card pane-specification-id='0' param='[federated.0tlk5161epizx11fo0gt61vd1n97].[none:Continent:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{29FD966E-2FB5-4E06-99EF-B7D1B4D5867D}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Recorded Cases'>
+          <current-page>
+            <multibucket>
+              <bucket>#2023-08-01 00:00:00#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Reported Mortalities'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Testing'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Vaccinations'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='regions'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='36' />
+      <device-preview visible='true'>
+        <device name='Medium Desktop Monitor' type='Desktop' />
+        <device is-portrait='true' type='Tablet' />
+        <device is-portrait='true' name='iPhone X, XS, 11, 11 Pro' type='Phone' />
+      </device-preview>
+      <simple-id uuid='{5FA898D0-EDEE-4CE6-A1F1-90DC0838D4D1}' />
+    </window>
+  </windows>
+</workbook>

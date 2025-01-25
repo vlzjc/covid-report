@@ -1,10 +1,7 @@
 use reportcovid;
 SELECT * FROM reportcovid.cases_deaths;
-
 SELECT * FROM reportcovid.region_country;
-
 SELECT * FROM reportcovid.vaxxed;
-
 SELECT * FROM reportcovid.tests_covid;
 
 -- Selecting Philippines
@@ -18,6 +15,16 @@ SELECT distinct country
 FROM cases_deaths
 JOIN region_country
 WHERE region = 'Asia';
+
+-- SELECTING ALL Countries/REGIONs that are aggregates
+SELECT DISTINCT country
+FROM reportcovid.cases_deaths
+WHERE country NOT IN (
+				SELECT name
+				FROM region_country
+                )
+;
+
 
 -- Selecting the max count of cases in a day | also had to exclude some of the rows
 SELECT distinct country, cd_date, new_cases as highest_case
@@ -91,5 +98,47 @@ END;
 DELIMITER ;
 CALL filldates('2019-01-01','2024-12-31');
 ;
+
+-- CREATES TEMP TABLE
+DROP table IF EXISTS `FUSED_cdtc`;
+CREATE temporary TABLE FUSED_cdtc 
+    SELECT dt.date_main, cd.country, cd.new_cases, cd.new_deaths, tc.new_tests FROM date_table dt
+	LEFT JOIN cases_deaths cd ON dt.date_main = cd.cd_date
+	LEFT JOIN tests_covid tc ON dt.date_main = tc.test_date
+	WHERE dt.date_main = cd.cd_date AND dt.date_main >= "2019-01-01" AND cd.country = tc.country
+;
+
+-- WINDOW FUNCTION WITH THE TEMP TABLE
+SELECT
+    country,
+    DENSE_RANK() OVER (ORDER BY country DESC) AS Country_Rank,
+    SUM(new_cases) AS "Total Cases",
+    SUM(new_deaths) AS "Total Deaths",
+    ROUND((SUM(new_deaths) * 100.0 / NULLIF(SUM(new_cases), 0)), 2) AS MORTALITY_RATE
+FROM 
+    FUSED_cdtc
+GROUP BY 
+    country
+ORDER BY 
+    country DESC;
+
+
+
+-- Mortality Rate with CTE, WINDOW FUNCTION, AND TEMP TABLE
+WITH RankedData AS (
+    SELECT 
+	 country,
+     DENSE_RANK() OVER (ORDER BY country ASC) AS Country_Rank,
+     SUM(new_cases) AS "Total Cases",
+     SUM(new_deaths) AS "Total Deaths",
+     ROUND((SUM(new_deaths) * 100.0 / NULLIF(SUM(new_cases), 0)), 2) AS MORTALITY_RATE
+     FROM      FUSED_cdtc
+     GROUP BY country 
+     ORDER BY country DESC
+)
+SELECT *
+FROM RankedData
+;
+
 
 

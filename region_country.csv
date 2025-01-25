@@ -1,3 +1,4 @@
+country,iso2,iso3,region
 name,alpha-2,alpha-3,region
 Afghanistan,AF,AFG,Asia
 Aland Islands,AX,ALA,Europe
@@ -7,7 +8,7 @@ American Samoa,AS,ASM,Oceania
 Andorra,AD,AND,Europe
 Angola,AO,AGO,Africa
 Anguilla,AI,AIA,Americas
-Antarctica,AQ,ATA,
+Antarctica,AQ,ATA,Antarctica
 Antigua and Barbuda,AG,ATG,Americas
 Argentina,AR,ARG,Americas
 Armenia,AM,ARM,Asia
@@ -216,7 +217,7 @@ Svalbard and Jan Mayen,SJ,SJM,Europe
 Sweden,SE,SWE,Europe
 Switzerland,CH,CHE,Europe
 Syrian Arab Republic,SY,SYR,Asia
-"Taiwan, Province of China",TW,TWN,
+"Taiwan, Province of China",TW,TWN,Asia
 Tajikistan,TJ,TJK,Asia
 "Tanzania, United Republic of",TZ,TZA,Africa
 Thailand,TH,THA,Asia

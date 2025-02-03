@@ -1,3 +1,4 @@
+
 # COVID-19: A Retrospective
 
 ## Overview
@@ -7,6 +8,8 @@ This repository contains a retrospective analysis of the COVID-19 pandemic, aimi
 - [Project Purpose](#Project-Purpose)
 - [Objectives](#Objectives)
 - [Data Sources](#Sources)
+- [Scope](#Scope)
+- [Assumptions and Contraints](#Assumptions-and-Contraints)
 - [License](#license)
 
 ## Project Purpose
@@ -23,6 +26,55 @@ To analyze the rapid rise and fall of the COVID-19 pandemic and present the insi
 - Provide actionable insights on the pandemic’s trends, peak periods, and decline.
 
 - Deliver a fully functional dashboard
+
+## Scope
+
+- In-Scope:
+
+  - Collection of COVID-19 data, including cases, deaths, tests and vaccination rates.
+
+  - Data processing using Python, Excel, and MySQL for ETL (Extract, Transform, Load).
+
+  - Development of data visualizations using Tableau and Power BI.
+
+  - Deployment of a dashboard accessible to stakeholders.
+
+- Out-of-Scope
+
+  - Predictive modeling or forecasting of future pandemics.
+
+  - Integration with live or real-time data feeds.
+
+
+## Assumptions and Constraints
+
+- Assumptions:
+
+    - Data sources will provide reliable and complete COVID-19 datasets.
+
+    - The tools used (Python, Excel, MySQL, Tableau, Power BI) are sufficient for the project’s scope.
+
+    - Stakeholders will provide timely feedback during reviews.
+
+- Constraints:
+
+  - Limited budget for software licenses and infrastructure.
+
+  - Dependence on historical data completeness and accuracy.
+
+## Risk Overview
+
+1. Data Quality Risks: Incomplete or inconsistent datasets may affect analysis.
+
+* Mitigation: Use data validation techniques and reliable sources.
+
+2. Technical Risks: Challenges in integrating tools (e.g., MySQL to Tableau).
+
+* Mitigation: Conduct testing and ensure technical compatibility. Review available resources and workarounds
+
+3. Timeline Risks: Delays in data preparation or dashboard development.
+
+- Mitigation: Set buffer times and conduct regular progress reviews.
 
 
 ## Sources
